@@ -1,1 +1,28 @@
-<app-lunch-item></app-lunch-item>
+<div class="row mb-2">
+  <div class="col-12">
+    <button class="btn btn-success">Nova Marmita</button>
+  </div>
+</div>
+<div class="row">
+  <div class="col-12">
+    <a
+      href="#"
+      class="list-group-item d-flex justify-content-between"
+      *ngFor="let lunch of lunches"
+    >
+      <div class="">
+        <h4 class="list-group-item-heading">{{ lunch.name }}</h4>
+        <p class="list-group-item-text">{{ lunch.description }}</p>
+      </div>
+      <div class="">
+        <img
+          [src]="lunch.imagePath"
+          [alt]="lunch.name"
+          class="img-responsive"
+          style="max-width: 170px"
+        />
+      </div>
+    </a>
+    <!-- <app-lunch-item></app-lunch-item> -->
+  </div>
+</div>
