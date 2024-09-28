@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { LunchItemComponent } from './lunch-item/lunch-item.component';
-import { Lunch } from './lunch.model';
+import { Lunch } from '../lunch.model';
 
 @Component({
   selector: 'app-lunch-list',
