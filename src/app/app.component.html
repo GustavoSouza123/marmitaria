@@ -1,10 +1,12 @@
-<app-header></app-header>
+<app-header (selectedFeature)="handleNavigation($event)"></app-header>
 
 <div class="container">
   <div class="row">
     <div class="col-12">
-      <app-lunch></app-lunch>
-      <app-ingredients></app-ingredients>
+      <app-lunch *ngIf="loadedFeature === 'lunch'"></app-lunch>
+      <app-ingredients
+        *ngIf="loadedFeature === 'ingredients'"
+      ></app-ingredients>
     </div>
   </div>
 </div>
