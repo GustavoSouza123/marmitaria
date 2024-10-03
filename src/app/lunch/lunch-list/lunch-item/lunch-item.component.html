@@ -1,1 +1,17 @@
-<p>lunch-item works!</p>
+<a
+  href="#"
+  class="list-group-item d-flex justify-content-between"
+>
+  <div class="">
+    <h4 class="list-group-item-heading">{{ lunch.name }}</h4>
+    <p class="list-group-item-text">{{ lunch.description }}</p>
+  </div>
+  <div class="">
+    <img
+      [src]="lunch.imagePath"
+      [alt]="lunch.name"
+      class="img-responsive"
+      style="max-width: 170px"
+    />
+  </div>
+</a>
