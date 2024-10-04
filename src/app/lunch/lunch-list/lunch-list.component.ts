@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { LunchItemComponent } from './lunch-item/lunch-item.component';
 import { Lunch } from '../lunch.model';
@@ -28,4 +28,10 @@ export class LunchListComponent {
       'https://assets.unileversolutions.com/recipes-v2/229468.jpg'
     ),
   ];
+
+	@Output() lunchSelected = new EventEmitter<Lunch>();
+
+	onLunchSelected(lunch: Lunch) {
+		this.lunchSelected.emit(lunch);
+	}
 }

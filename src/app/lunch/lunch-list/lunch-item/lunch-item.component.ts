@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { Lunch } from '../../lunch.model';
 
 @Component({
@@ -9,5 +9,10 @@ import { Lunch } from '../../lunch.model';
   styleUrl: './lunch-item.component.css',
 })
 export class LunchItemComponent {
-	@Input() lunch!: Lunch;
+  @Input() lunch!: Lunch;
+  @Output() lunchClicked = new EventEmitter<void>();
+
+  onClicked() {
+    this.lunchClicked.emit();
+  }
 }

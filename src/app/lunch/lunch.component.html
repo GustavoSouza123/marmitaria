@@ -1,8 +1,14 @@
 <div class="row mt-4">
   <div class="col-md-5">
-    <app-lunch-list></app-lunch-list>
+    <app-lunch-list (lunchSelected)="selectedLunch = $event"></app-lunch-list>
   </div>
   <div class="col-md-7">
-    <app-lunch-details></app-lunch-details>
+    <app-lunch-details
+      *ngIf="selectedLunch; else info"
+      [lunch]="selectedLunch"
+    ></app-lunch-details>
+    <ng-template #info>
+      <p>Selecione uma marmita</p>
+    </ng-template>
   </div>
 </div>

@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import { Lunch } from '../lunch.model';
 
 @Component({
   selector: 'app-lunch-details',
@@ -7,4 +8,6 @@ import { Component } from '@angular/core';
   templateUrl: './lunch-details.component.html',
   styleUrl: './lunch-details.component.css',
 })
-export class LunchDetailsComponent {}
+export class LunchDetailsComponent {
+	@Input() lunch!: Lunch;
+}

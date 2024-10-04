@@ -8,6 +8,7 @@
     <app-lunch-item
       *ngFor="let lunchElement of lunches"
       [lunch]="lunchElement"
+			(lunchClicked)="onLunchSelected(lunchElement)"
     ></app-lunch-item>
   </div>
 </div>
