@@ -15,7 +15,7 @@ export class LunchListComponent {
     new Lunch(
       'Churrasco',
       'Churrasco de picanha',
-      'https://revistamenu.com.br/wp-content/uploads/sites/24/2024/06/picanha-1-scaled.jpg'
+      'https://irp.cdn-website.com/33406c6e/dms3rep/multi/picanha-aa0c51c6.jpg'
     ),
     new Lunch(
       'Lasanha',

@@ -17,5 +17,7 @@ export class IngredientsComponent {
     new Ingredient('Couve', 2),
   ];
 
-  constructor() {}
+  onIngredientAdded(ingredient: Ingredient) {
+    this.ingredientList.push(ingredient);
+  }
 }
