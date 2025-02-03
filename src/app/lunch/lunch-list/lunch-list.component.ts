@@ -29,9 +29,9 @@ export class LunchListComponent {
     ),
   ];
 
-	@Output() lunchSelected = new EventEmitter<Lunch>();
+  @Output() lunchSelected = new EventEmitter<Lunch>();
 
-	onLunchSelected(lunch: Lunch) {
-		this.lunchSelected.emit(lunch);
-	}
+  onLunchSelected(lunch: Lunch) {
+    this.lunchSelected.emit(lunch);
+  }
 }
