@@ -1,0 +1,9 @@
+.lunch-dropdown li a {
+	display: block;
+	padding: 8px;
+	transition: .2s;
+}
+
+.lunch-dropdown li:hover a {
+	color: #333;
+}
