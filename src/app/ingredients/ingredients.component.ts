@@ -1,7 +1,8 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { IngredientEditComponent } from './ingredient-edit/ingredient-edit.component';
 import { Ingredient } from '../shared/ingredient.model';
+import { IngredientsService } from './ingredients.service';
 
 @Component({
   selector: 'app-ingredients',
@@ -10,14 +11,16 @@ import { Ingredient } from '../shared/ingredient.model';
   templateUrl: './ingredients.component.html',
   styleUrl: './ingredients.component.css',
 })
-export class IngredientsComponent {
-  ingredientList: Ingredient[] = [
-    new Ingredient('Carne', 1),
-    new Ingredient('Arroz', 2),
-    new Ingredient('Couve', 2),
-  ];
+export class IngredientsComponent implements OnInit {
+  ingredients?: Ingredient[];
 
-  onIngredientAdded(ingredient: Ingredient) {
-    this.ingredientList.push(ingredient);
+  constructor(private ingredientService: IngredientsService) {}
+
+  ngOnInit(): void {
+    this.ingredients = this.ingredientService.getIngredients();
   }
+
+  // onIngredientAdded(ingredient: Ingredient) {
+  //   this.ingredientList.push(ingredient);
+  // }
 }

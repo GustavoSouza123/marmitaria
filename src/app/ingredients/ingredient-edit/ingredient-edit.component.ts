@@ -17,13 +17,13 @@ import { Ingredient } from '../../shared/ingredient.model';
 export class IngredientEditComponent {
   @ViewChild('nameInput') nameInputRef!: ElementRef;
   @ViewChild('amountInput') amountInputRef!: ElementRef;
-  @Output() ingredientAdded = new EventEmitter<Ingredient>();
+  // @Output() ingredientAdded = new EventEmitter<Ingredient>();
 
   addIngredient() {
     const ingredientName = this.nameInputRef.nativeElement.value;
     const ingredientAmount = this.amountInputRef.nativeElement.value;
     const newIngredient = new Ingredient(ingredientName, ingredientAmount);
-    this.ingredientAdded.emit(newIngredient);
+    // this.ingredientAdded.emit(newIngredient);
     this.nameInputRef.nativeElement.value = '';
     this.amountInputRef.nativeElement.value = '';
   }
