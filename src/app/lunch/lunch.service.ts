@@ -1,6 +1,9 @@
+import { EventEmitter } from '@angular/core';
 import { Lunch } from './lunch.model';
 
 export class LunchService {
+	lunchSelected = new EventEmitter<Lunch>();
+
   private lunches: Lunch[] = [
     new Lunch(
       'Churrasco',

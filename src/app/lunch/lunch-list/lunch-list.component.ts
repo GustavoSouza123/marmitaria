@@ -1,4 +1,4 @@
-import { Component, EventEmitter, OnInit, Output } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { LunchItemComponent } from './lunch-item/lunch-item.component';
 import { Lunch } from '../lunch.model';
@@ -14,7 +14,7 @@ import { LunchService } from '../lunch.service';
 export class LunchListComponent implements OnInit {
 	lunches?: Lunch[];
 
-  @Output() lunchSelected = new EventEmitter<Lunch>();
+  // @Output() lunchSelected = new EventEmitter<Lunch>();
 
 	constructor(private lunchService: LunchService) {}
 
@@ -22,7 +22,7 @@ export class LunchListComponent implements OnInit {
 		this.lunches = this.lunchService.getLunches();
 	}
 
-  onLunchSelected(lunch: Lunch) {
-    this.lunchSelected.emit(lunch);
-  }
+  // onLunchSelected(lunch: Lunch) {
+  //   this.lunchSelected.emit(lunch);
+  // }
 }
