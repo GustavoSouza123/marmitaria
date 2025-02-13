@@ -1,11 +1,12 @@
 import { Component, Input } from '@angular/core';
+import { CommonModule } from '@angular/common';
 import { Lunch } from '../lunch.model';
 import { DropdownDirective } from '../../shared/dropdown.directive';
 
 @Component({
   selector: 'app-lunch-details',
   standalone: true,
-  imports: [DropdownDirective],
+  imports: [CommonModule, DropdownDirective],
   templateUrl: './lunch-details.component.html',
   styleUrl: './lunch-details.component.css',
 })
