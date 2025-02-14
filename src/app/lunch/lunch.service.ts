@@ -1,7 +1,9 @@
-import { EventEmitter } from '@angular/core';
+import { EventEmitter, Injectable } from '@angular/core';
 import { Lunch } from './lunch.model';
 import { Ingredient } from '../shared/ingredient.model';
+import { IngredientsService } from '../ingredients/ingredients.service';
 
+@Injectable() // to inject the ingredients service into this service
 export class LunchService {
   lunchSelected = new EventEmitter<Lunch>();
 
@@ -26,7 +28,13 @@ export class LunchService {
     ),
   ];
 
+  constructor(private ingredientsService: IngredientsService) {}
+
   getLunches() {
     return this.lunches.slice();
   }
+
+  addIngretientsToList(ingredients: Ingredient[]) {
+		this.ingredientsService.addIngredients(ingredients);
+	}
 }

@@ -5,5 +5,9 @@
 }
 
 .lunch-dropdown li:hover a {
-	color: #333;
+	color: #777;
+}
+
+.lunch-dropdown li:nth-child(1) a {
+	cursor: pointer;
 }
