@@ -3,13 +3,16 @@
     <app-lunch-list></app-lunch-list>
   </div>
   <div class="col-md-7">
-    <app-lunch-details
+    <!--
+		<app-lunch-details
       *ngIf="selectedLunch; else info"
       [lunch]="selectedLunch"
     ></app-lunch-details>
     <ng-template #info>
-      <p>Selecione uma marmita</p>
+      <p>Por favor, selecione uma marmita</p>
     </ng-template>
+		-->
+    <router-outlet></router-outlet>
   </div>
 </div>
 

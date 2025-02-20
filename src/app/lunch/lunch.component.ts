@@ -1,15 +1,15 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { LunchListComponent } from './lunch-list/lunch-list.component';
-import { LunchDetailsComponent } from './lunch-details/lunch-details.component';
 import { Lunch } from './lunch.model';
 import { LunchService } from './lunch.service';
 import { Subscription } from 'rxjs';
+import { RouterOutlet } from '@angular/router';
 
 @Component({
   selector: 'app-lunch',
   standalone: true,
-  imports: [CommonModule, LunchListComponent, LunchDetailsComponent],
+  imports: [CommonModule, RouterOutlet, LunchListComponent],
   templateUrl: './lunch.component.html',
   styleUrl: './lunch.component.css',
   providers: [LunchService],

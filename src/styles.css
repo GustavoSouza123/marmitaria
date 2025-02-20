@@ -1,15 +1,15 @@
 /* You can add global styles to this file, and also import other style files */
 :root {
-	--bs-list-group-border-width: 1px;
-	--bs-list-group-border-color: #ddd;
-	--bs-light-rgb: 244, 245, 246;
+  --bs-list-group-border-width: 1px;
+  --bs-list-group-border-color: #ddd;
+  --bs-light-rgb: 244, 245, 246;
 }
 
 .dropdown-toggle.show + ul.dropdown-menu {
-	display: block;
-	position: absolute;
-	transform: translate3d(0px, 38px, 0px);
-	top: 0px;
-	left: 0px;
-	will-change: transform;
+  display: block;
+  position: absolute;
+  transform: translate3d(0px, 38px, 0px);
+  top: 0px;
+  left: 0px;
+  will-change: transform;
 }
